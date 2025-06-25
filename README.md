@@ -22,8 +22,8 @@ This app interacts with two main endpoints:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-org/cmd-ios-frontend.git
-cd cmd-ios-frontend
+git clone https://github.com/Avinash96-gthb/STEP-CMD-UI.git
+cd STEP-CMD-UI
 
 # 2. Open the project in Xcode
 open CMD.xcodeproj
