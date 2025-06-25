@@ -1,6 +1,6 @@
 # CMD – Clinic Management Dashboard (Frontend)
 
-This is the iOS frontend for **CMD (Clinic Management Dashboard)**, a case study project for the **STEP – Simply Training Education Program**.
+This is the iOS frontend for **CMD (Clinic Management Dashboard)**, a case study project for the **STEP**.
 
 It is built using **UIKit** with fully programmatic UI and utilizes modern Swift concurrency (`async/await`). The app enables users to create new clinics and fetch all existing clinics from a backend API.
 
