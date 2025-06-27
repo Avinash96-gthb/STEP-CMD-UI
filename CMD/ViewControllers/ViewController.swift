@@ -44,6 +44,7 @@ class ViewController: UIViewController {
         view.addSubview(clinicListButton)
         clinicListButton.translatesAutoresizingMaskIntoConstraints = false
         clinicListButton.setTitle(title: "View Clinics !!")
+        clinicListButton.addTarget(self, action: #selector(clinicListButtonTapped), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             clinicListButton.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 60),
@@ -57,6 +58,7 @@ class ViewController: UIViewController {
         view.addSubview(createClinicButton)
         createClinicButton.translatesAutoresizingMaskIntoConstraints = false
         createClinicButton.setTitle(title: "Create a new clinic")
+        createClinicButton.addTarget(self, action: #selector(clinicCreateButtonTapped), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             createClinicButton.topAnchor.constraint(equalTo: clinicListButton.bottomAnchor, constant: 20),
@@ -75,6 +77,16 @@ class ViewController: UIViewController {
         } catch {
             print("Failed to fetch clinics: \(error)")
         }
+    }
+    
+    @objc func clinicListButtonTapped(){
+        let destinationVC = ClinicListViewController()
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
+    
+    @objc func clinicCreateButtonTapped(){
+        let destinationVC = CreateClinicViewController()
+        navigationController?.pushViewController(destinationVC, animated: true)
     }
 }
 
